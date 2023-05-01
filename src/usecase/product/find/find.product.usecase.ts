@@ -1,5 +1,3 @@
-import Product from "../../../domain/product/entity/product"
-import ProductFatory from "../../../domain/product/factory/product.factory"
 import ProductRepositoryInterface from "../../../domain/product/repository/product-repository.interface"
 import {InputFindProductDto, OutputFindProductDto} from "./find.product.dto"
 

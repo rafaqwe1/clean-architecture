@@ -1,7 +1,7 @@
 import CustomerRepositoryInterface from "../../../domain/customer/repository/customer-repository.interface"
 import { InputListCustomerDto, OutputListCustomerDto } from "./list.customer.dto"
 
-export default class FindCustomerUseCase {
+export default class ListCustomerUseCase {
     private customerRepository: CustomerRepositoryInterface
 
     constructor(customerRepository: CustomerRepositoryInterface) {
