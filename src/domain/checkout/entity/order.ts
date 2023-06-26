@@ -28,7 +28,7 @@ export default class Order {
 		}
 
 		if(this._items.some(item => item.quantity <= 0)){
-			throw new Error("Quantity must be greater then 0")
+			throw new Error("Quantity must be greater than 0")
 		}
 
 		return true

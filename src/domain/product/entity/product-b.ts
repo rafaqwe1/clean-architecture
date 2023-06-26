@@ -44,7 +44,7 @@ export default class ProductB implements ProductInterface {
         }
 
         if(this._price <= 0){
-            throw new Error("Price must be greater then 0")
+            throw new Error("Price must be greater than 0")
         }
     }
 }
