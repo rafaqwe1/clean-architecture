@@ -40,7 +40,7 @@ describe("Order unit tests", () => {
       const item = new OrderItem("i1", "Item 1", 100, "p1", 0)
       const order = new Order("1", "1", [item])
       order.total()
-    }).toThrowError("Quantity must be greater then 0")
+    }).toThrowError("Quantity must be greater than 0")
   })
 
 })

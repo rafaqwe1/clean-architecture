@@ -45,12 +45,13 @@ describe("Unit test update customer usecase", () => {
         const customerRepository = MockRepository()
         const customerUpdateUseCase = new UpdateCreateUseCase(customerRepository)
         input.name = ""
-        await expect(customerUpdateUseCase.execute(input)).rejects.toThrow("Name is required")
+        await expect(customerUpdateUseCase.execute(input)).rejects.toThrow("customer: Name is required")
     })
 
     it("should thrown an error when street is missing", async () => {
         const customerRepository = MockRepository()
         const customerUpdateUseCase = new UpdateCreateUseCase(customerRepository)
+        customer.changeName("John")
         input.name = "John"
         input.address.street = ""
         await expect(customerUpdateUseCase.execute(input)).rejects.toThrow("Street is required")

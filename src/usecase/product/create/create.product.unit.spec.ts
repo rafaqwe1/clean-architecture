@@ -30,7 +30,7 @@ describe("Unit test create product usecase", () => {
         const productRepository = MockRepository()
         const usecase = new CreateProductUseCase(productRepository)
         input.price = 0
-        await expect(usecase.execute(input)).rejects.toThrow("Price must be greater then 0")
+        await expect(usecase.execute(input)).rejects.toThrow("product: Price must be greater than 0")
     })
 
     it("should throw an error when name is missing", async () => {
@@ -38,6 +38,6 @@ describe("Unit test create product usecase", () => {
         const usecase = new CreateProductUseCase(productRepository)
         input.price = 10
         input.name = ""
-        await expect(usecase.execute(input)).rejects.toThrow("Name is required")
+        await expect(usecase.execute(input)).rejects.toThrow("product: Name is required")
     })
 })
